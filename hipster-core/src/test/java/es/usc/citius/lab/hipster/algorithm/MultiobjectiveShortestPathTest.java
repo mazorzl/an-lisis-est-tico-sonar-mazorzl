@@ -107,8 +107,7 @@ public class MultiobjectiveShortestPathTest {
         BinaryFunction<Cost> f = new BinaryFunction<Cost>() {
             @Override
             public Cost apply(Cost a, Cost b) {
-                Cost c = new Cost(a.c1 + b.c1, a.c2 + b.c2);
-                return c;
+                return new Cost(a.c1 + b.c1, a.c2 + b.c2);
             }
         };
         // The identity cost identity satisfy:
